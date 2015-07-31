@@ -73,7 +73,7 @@ class Format
 
     h1: ( ->
       headers = (lvl) ->
-        exclude = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'list', 'bullet']
+        exclude = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'list', 'bullet', 'quote']
         exclude.splice(lvl-1, 1)
         {
           type: Format.types.LINE
@@ -90,13 +90,13 @@ class Format
 
     bullet:
       type: Format.types.LINE
-      exclude: ['list','h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+      exclude: ['list','h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'quote']
       parentTag: 'UL'
       tag: 'LI'
 
     list:
       type: Format.types.LINE
-      exclude: ['bullet', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+      exclude: ['bullet', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'quote']
       parentTag: 'OL'
       tag: 'LI'
 
