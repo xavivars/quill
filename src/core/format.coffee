@@ -66,6 +66,11 @@ class Format
       style: 'textAlign'
       default: 'left'
 
+    quote:
+      type: Format.types.LINE
+      exclude: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'list', 'bullet']
+      tag: 'BLOCKQUOTE'
+
     h1: ( ->
       headers = (lvl) ->
         exclude = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'list', 'bullet']

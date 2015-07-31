@@ -9,9 +9,9 @@ class Toolbar
     container: null
 
   @formats:
-    LINE    : { 'align', 'bullet', 'list', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' }
+    LINE    : { 'align', 'bullet', 'list', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'quote' }
     SELECT  : { 'align', 'background', 'color', 'font', 'size' }
-    TOGGLE  : { 'bold', 'bullet', 'image', 'italic', 'link', 'list', 'strike', 'underline', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' }
+    TOGGLE  : { 'bold', 'bullet', 'image', 'italic', 'link', 'list', 'strike', 'underline', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'quote' }
     TOOLTIP : { 'image', 'link' }
 
   constructor: (@quill, @options) ->
