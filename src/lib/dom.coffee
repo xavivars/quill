@@ -416,7 +416,6 @@ dom = _.extend(dom,
 
   EMBED_TAGS: {
     'IMG'
-    'META'
   }
 
   LINE_TAGS: {
