@@ -56,7 +56,7 @@ class Normalizer
         value = dom.convertFontSize(value) if attribute == 'size'
         node.style[style] = value
         node.removeAttribute(attribute)
-    )
+    ) if !dom.VOID_TAGS[node.tagName]
     # Chrome turns <b> into style in some cases
     if (node.style.fontWeight == 'bold')
       node.style.fontWeight = ''
