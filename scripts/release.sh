@@ -26,9 +26,9 @@ CURRENT_BRANCH=$(git symbolic-ref -q HEAD)
 CURRENT_BRANCH=${CURRENT_BRANCH##refs/heads/}
 CURRENT_BRANCH=${CURRENT_BRANCH:-HEAD}
 
-if [ "$CURRENT_BRANCH" != "master" ]
+if [ "$CURRENT_BRANCH" != "reedsy" ]
 then
-  echo "You must be releasing from the master branch."
+  echo "You must be releasing from the reedsy branch."
   exit
 fi
 
@@ -53,6 +53,6 @@ git tag v$VERSION
 git push origin refs/tags/v$VERSION
 
 # Revert all the changes
-git checkout master
+git checkout reedsy
 git checkout .gitignore
 git branch -D release-$VERSION
