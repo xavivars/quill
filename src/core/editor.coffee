@@ -36,6 +36,7 @@ class Editor
 
   stopPolling: ->
     clearInterval(@timer)
+    @timer = null
 
   enable: (enabled = true) ->
     @root.setAttribute('contenteditable', enabled)
