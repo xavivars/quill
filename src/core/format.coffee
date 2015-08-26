@@ -65,7 +65,7 @@ class Format
         return node.getAttribute('href')
 
     image:
-      type: Format.types.EMBED
+      type: Format.types.LINE
       tag: 'IMG'
       attribute: 'src'
 

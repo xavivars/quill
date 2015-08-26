@@ -397,6 +397,7 @@ dom = _.extend(dom,
     'H1', 'H2', 'H3', 'H4', 'H5', 'H6'
     'HEADER'
     'HGROUP'
+    'IMG'
     'LI'
     'OL'
     'OUTPUT'
@@ -415,12 +416,12 @@ dom = _.extend(dom,
   }
 
   EMBED_TAGS: {
-    'IMG',
     'INPUT'
   }
 
   LINE_TAGS: {
     'DIV'
+    'IMG'
     'LI'
   }
 
