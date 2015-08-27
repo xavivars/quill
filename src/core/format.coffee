@@ -69,6 +69,10 @@ class Format
       tag: 'IMG'
       attribute: 'src'
 
+    caption:
+      type: Format.types.LINE
+      tag: 'FIGCAPTION'
+
     align:
       type: Format.types.LINE
       style: 'textAlign'

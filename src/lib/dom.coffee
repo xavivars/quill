@@ -421,6 +421,7 @@ dom = _.extend(dom,
 
   LINE_TAGS: {
     'DIV'
+    'FIGCAPTION'
     'IMG'
     'LI'
   }
