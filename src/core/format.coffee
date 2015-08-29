@@ -103,12 +103,14 @@ class Format
     bullet:
       type: Format.types.LINE
       exclude: ['list','h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'quote']
+      inherit: true
       parentTag: 'UL'
       tag: 'LI'
 
     list:
       type: Format.types.LINE
       exclude: ['bullet', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'quote']
+      inherit: true
       parentTag: 'OL'
       tag: 'LI'
 
