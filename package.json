@@ -37,7 +37,7 @@
     "eventemitter3": "^3.1.0",
     "extend": "^3.0.2",
     "parchment": "2.0.0-dev.0",
-    "quill-delta": "4.2.1"
+    "quill-delta": "reedsy/delta#9f5ec7da135e22d3a88e259fb67ca3e6adc86877"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
