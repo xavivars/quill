@@ -1,3 +1,9 @@
+## Reedsy: Why Fork?
+
+We need to use our own forked version of the `Delta` class, which adds support for complex attributes (which we need for tracked changes).
+
+## Introduction
+
 Note: This branch and README covers the upcoming 2.0 release. View [1.x docs here](https://github.com/quilljs/quill/tree/1.3.6).
 
 <h1 align="center">
