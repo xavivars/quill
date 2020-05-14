@@ -27,7 +27,7 @@ module.exports = config => {
     colors: true,
     autoWatch: false,
     singleRun: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
 
     client: {
       useIframe: true,
