@@ -33,5 +33,5 @@ jobs:
     - name: Test
       run: npm run travis
     - name: Tag
-      if: ${{ github.ref == 'refs/heads/master' }}
+      if: ${{ github.ref == 'refs/heads/develop' }}
       run: ./tag.sh
