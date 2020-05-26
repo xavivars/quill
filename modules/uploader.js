@@ -1,4 +1,4 @@
-import Delta from 'quill-delta';
+import Delta from '@reedsy/quill-delta';
 import Emitter from '../core/emitter';
 import Module from '../core/module';
 

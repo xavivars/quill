@@ -1,4 +1,4 @@
-import Delta from 'quill-delta';
+import Delta from '@reedsy/quill-delta';
 import Quill from '../../../core';
 import { globalRegistry } from '../../../core/quill';
 import { getLastChangeIndex } from '../../../modules/history';

@@ -1,4 +1,4 @@
-import Delta from 'quill-delta';
+import Delta from '@reedsy/quill-delta';
 import Editor from '../../../core/editor';
 import Link from '../../../formats/link';
 

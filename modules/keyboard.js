@@ -1,6 +1,6 @@
 import cloneDeep from 'lodash.clonedeep';
 import isEqual from 'lodash.isequal';
-import Delta, { AttributeMap } from 'quill-delta';
+import Delta, { AttributeMap } from '@reedsy/quill-delta';
 import { EmbedBlot, Scope, TextBlot } from 'parchment';
 import Quill from '../core/quill';
 import logger from '../core/logger';
