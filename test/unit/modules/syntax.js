@@ -1,5 +1,5 @@
 import hljs from 'highlight.js';
-import Delta from 'quill-delta';
+import Delta from '@reedsy/quill-delta';
 import Quill from '../../../core/quill';
 import BoldBlot from '../../../formats/bold';
 import CodeBlock, { CodeBlockContainer } from '../../../formats/code';

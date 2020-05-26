@@ -1,4 +1,4 @@
-import Delta from 'quill-delta';
+import Delta from '@reedsy/quill-delta';
 import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 import * as Parchment from 'parchment';

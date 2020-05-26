@@ -1,4 +1,4 @@
-import Delta from 'quill-delta';
+import Delta from '@reedsy/quill-delta';
 import { Range } from '../../../core/selection';
 import Quill from '../../../core';
 
