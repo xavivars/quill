@@ -12,6 +12,7 @@ import TextBlot from './blots/text';
 import Clipboard from './modules/clipboard';
 import History from './modules/history';
 import Keyboard from './modules/keyboard';
+import Selection from './core/selection';
 import Uploader from './modules/uploader';
 
 Quill.register({
@@ -28,6 +29,7 @@ Quill.register({
   'modules/clipboard': Clipboard,
   'modules/history': History,
   'modules/keyboard': Keyboard,
+  'modules/selection': Selection,
   'modules/uploader': Uploader,
 });
 
