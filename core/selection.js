@@ -3,6 +3,7 @@ import cloneDeep from 'lodash.clonedeep';
 import isEqual from 'lodash.isequal';
 import Emitter from './emitter';
 import logger from './logger';
+import Module from './module';
 
 const debug = logger('quill:selection');
 
@@ -13,10 +14,11 @@ class Range {
   }
 }
 
-class Selection {
-  constructor(scroll, emitter) {
-    this.emitter = emitter;
-    this.scroll = scroll;
+class Selection extends Module {
+  constructor(quill, options) {
+    super(quill, options);
+    this.emitter = quill.emitter;
+    this.scroll = quill.scroll;
     this.composing = false;
     this.mouseDown = false;
     this.root = this.scroll.domNode;
