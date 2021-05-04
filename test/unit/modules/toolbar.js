@@ -181,5 +181,15 @@ describe('Toolbar', function() {
       expect(centerButton.classList.contains('ql-active')).toBe(false);
       expect(leftButton.classList.contains('ql-active')).toBe(false);
     });
+
+    it('update on format', function() {
+      const boldButton = this.container.parentNode.querySelector(
+        'button.ql-bold',
+      );
+      this.quill.setSelection(1, 2);
+      expect(boldButton.classList.contains('ql-active')).toBe(false);
+      this.quill.format('bold', true, 'user');
+      expect(boldButton.classList.contains('ql-active')).toBe(true);
+    });
   });
 });
