@@ -299,9 +299,9 @@ class Quill {
     return this.theme.modules[name];
   }
 
-  getSelection(focus = false) {
+  getSelection(focus = false, source = Emitter.sources.API) {
     if (focus) this.focus();
-    this.update(); // Make sure we access getRange with editor in consistent state
+    this.update(source); // Make sure we access getRange with editor in consistent state
     return this.selection.getRange()[0];
   }
 

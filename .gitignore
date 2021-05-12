@@ -3,5 +3,8 @@
 /selenium
 /docs/_site
 /src
+/vendor
+/.bundle
 *.d.ts
 *.log
+package-lock.json
