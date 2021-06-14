@@ -5,7 +5,7 @@ import {
   EmbedBlot,
   LeafBlot,
   Scope,
-} from 'parchment';
+} from '@reedsy/parchment';
 import Break from './break';
 import Inline from './inline';
 import TextBlot from './text';

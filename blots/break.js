@@ -1,4 +1,4 @@
-import { EmbedBlot } from 'parchment';
+import { EmbedBlot } from '@reedsy/parchment';
 
 class Break extends EmbedBlot {
   static value() {

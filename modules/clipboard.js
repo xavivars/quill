@@ -6,7 +6,7 @@ import {
   Scope,
   StyleAttributor,
   BlockBlot,
-} from 'parchment';
+} from '@reedsy/parchment';
 import { BlockEmbed } from '../blots/block';
 import Quill from '../core/quill';
 import logger from '../core/logger';

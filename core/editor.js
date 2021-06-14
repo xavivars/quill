@@ -2,7 +2,7 @@ import cloneDeep from 'lodash.clonedeep';
 import isEqual from 'lodash.isequal';
 import merge from 'lodash.merge';
 import Delta, { AttributeMap } from '@reedsy/quill-delta';
-import { LeafBlot } from 'parchment';
+import { LeafBlot } from '@reedsy/parchment';
 import { Range } from './selection';
 import CursorBlot from '../blots/cursor';
 import Block, { BlockEmbed, bubbleFormats } from '../blots/block';

@@ -1,4 +1,4 @@
-import { Scope, ScrollBlot, ContainerBlot } from 'parchment';
+import { Scope, ScrollBlot, ContainerBlot } from '@reedsy/parchment';
 import Emitter from '../core/emitter';
 import Block, { BlockEmbed } from './block';
 import Break from './break';

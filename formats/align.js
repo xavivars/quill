@@ -1,4 +1,9 @@
-import { Attributor, ClassAttributor, Scope, StyleAttributor } from 'parchment';
+import {
+  Attributor,
+  ClassAttributor,
+  Scope,
+  StyleAttributor,
+} from '@reedsy/parchment';
 
 const config = {
   scope: Scope.BLOCK,

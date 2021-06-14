@@ -1,5 +1,5 @@
 import Delta from '@reedsy/quill-delta';
-import { EmbedBlot, Scope } from 'parchment';
+import { EmbedBlot, Scope } from '@reedsy/parchment';
 import Quill from '../core/quill';
 import logger from '../core/logger';
 import Module from '../core/module';

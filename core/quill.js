@@ -1,7 +1,7 @@
 import Delta from '@reedsy/quill-delta';
 import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
-import * as Parchment from 'parchment';
+import * as Parchment from '@reedsy/parchment';
 import Editor from './editor';
 import Emitter from './emitter';
 import Module from './module';

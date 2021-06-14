@@ -1,4 +1,4 @@
-import { ClassAttributor, Scope, StyleAttributor } from 'parchment';
+import { ClassAttributor, Scope, StyleAttributor } from '@reedsy/parchment';
 
 class ColorAttributor extends StyleAttributor {
   value(domNode) {

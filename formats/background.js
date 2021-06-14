@@ -1,4 +1,4 @@
-import { ClassAttributor, Scope } from 'parchment';
+import { ClassAttributor, Scope } from '@reedsy/parchment';
 import { ColorAttributor } from './color';
 
 const BackgroundClass = new ClassAttributor('background', 'ql-bg', {
