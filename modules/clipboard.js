@@ -19,6 +19,7 @@ import { ColorStyle } from '../formats/color';
 import { DirectionAttribute, DirectionStyle } from '../formats/direction';
 import { FontStyle } from '../formats/font';
 import { SizeStyle } from '../formats/size';
+import { deleteRange } from './keyboard';
 
 const debug = logger('quill:clipboard');
 
@@ -135,7 +136,7 @@ class Clipboard extends Module {
     e.clipboardData.setData('text/plain', text);
     e.clipboardData.setData('text/html', html);
     if (isCut) {
-      this.quill.deleteText(range, Quill.sources.USER);
+      deleteRange({ range, quill: this.quill });
     }
   }
 
@@ -414,7 +415,7 @@ function matchIndent(node, delta, scroll) {
   }
   if (indent <= 0) return delta;
   return delta.reduce((composed, op) => {
-    if (op.attributes && op.attributes.list) {
+    if (op.attributes && typeof op.attributes.indent === 'number') {
       return composed.push(op);
     }
     return composed.insert(op.insert, { indent, ...(op.attributes || {}) });
