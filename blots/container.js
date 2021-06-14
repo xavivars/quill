@@ -1,4 +1,4 @@
-import { ContainerBlot } from 'parchment';
+import { ContainerBlot } from '@reedsy/parchment';
 
 class Container extends ContainerBlot {}
 

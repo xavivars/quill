@@ -1,5 +1,5 @@
 import Delta from '@reedsy/quill-delta';
-import { ClassAttributor, Scope } from 'parchment';
+import { ClassAttributor, Scope } from '@reedsy/parchment';
 import Inline from '../blots/inline';
 import Quill from '../core/quill';
 import Module from '../core/module';

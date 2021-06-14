@@ -1,4 +1,4 @@
-import { EmbedBlot, InlineBlot, Scope } from 'parchment';
+import { EmbedBlot, InlineBlot, Scope } from '@reedsy/parchment';
 import Break from './break';
 import Text from './text';
 

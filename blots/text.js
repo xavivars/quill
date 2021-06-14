@@ -1,4 +1,4 @@
-import { TextBlot } from 'parchment';
+import { TextBlot } from '@reedsy/parchment';
 
 class Text extends TextBlot {}
 

@@ -1,6 +1,6 @@
 {
   "name": "@reedsy/quill",
-  "version": "2.0.0-reedsy-1.1.2",
+  "version": "2.0.0-reedsy-1.2.0",
   "description": "Your powerful, rich text editor",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "http://quilljs.com",
@@ -32,12 +32,12 @@
     }
   },
   "dependencies": {
+    "@reedsy/parchment": "^2.0.0-reedsy-1.0.0",
     "@reedsy/quill-delta": "^4.2.2-reedsy.1.0.1",
     "eventemitter3": "^4.0.0",
     "lodash.clonedeep": "^4.5.0",
     "lodash.isequal": "^4.5.0",
-    "lodash.merge": "^4.5.0",
-    "parchment": "2.0.0-dev.2"
+    "lodash.merge": "^4.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
