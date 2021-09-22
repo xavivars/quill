@@ -31,6 +31,9 @@
       "webpack": "9080"
     }
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@reedsy/parchment": "^2.0.0-reedsy-1.0.0",
     "@reedsy/quill-delta": "^4.2.2-reedsy.1.0.1",
