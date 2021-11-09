@@ -292,6 +292,15 @@ function isLine(node) {
   ].includes(node.tagName.toLowerCase());
 }
 
+function isBetweenInlineElements(node) {
+  return (
+    node.previousSibling &&
+    node.nextSibling &&
+    !isLine(node.previousSibling) &&
+    !isLine(node.nextSibling)
+  );
+}
+
 const preNodes = new WeakMap();
 function isPre(node) {
   if (node == null) return false;
@@ -507,7 +516,11 @@ function matchText(node, delta) {
   if (node.parentNode.tagName === 'O:P') {
     return delta.insert(text.trim());
   }
-  if (text.trim().length === 0 && text.includes('\n')) {
+  if (
+    text.trim().length === 0 &&
+    text.includes('\n') &&
+    !isBetweenInlineElements(node)
+  ) {
     return delta;
   }
   if (!isPre(node)) {
