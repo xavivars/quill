@@ -252,8 +252,10 @@ function deltaEndsWith(delta, text) {
   return endText.slice(-1 * text.length) === text;
 }
 
-function isLine(node) {
-  if (node.childNodes.length === 0) return false; // Exclude embed blocks
+function isLine(node, scroll) {
+  if (node.nodeType !== Node.ELEMENT_NODE) return false;
+  const match = scroll.query(node);
+  if (match && match.prototype instanceof EmbedBlot) return false;
   return [
     'address',
     'article',
@@ -292,12 +294,12 @@ function isLine(node) {
   ].includes(node.tagName.toLowerCase());
 }
 
-function isBetweenInlineElements(node) {
+function isBetweenInlineElements(node, scroll) {
   return (
     node.previousSibling &&
     node.nextSibling &&
-    !isLine(node.previousSibling) &&
-    !isLine(node.nextSibling)
+    !isLine(node.previousSibling, scroll) &&
+    !isLine(node.nextSibling, scroll)
   );
 }
 
@@ -452,13 +454,13 @@ function matchList(node, delta) {
 
 function matchNewline(node, delta, scroll) {
   if (!deltaEndsWith(delta, '\n')) {
-    if (isLine(node)) {
+    if (isLine(node, scroll)) {
       return delta.insert('\n');
     }
     if (delta.length() > 0 && node.nextSibling) {
       let { nextSibling } = node;
       while (nextSibling != null) {
-        if (isLine(nextSibling)) {
+        if (isLine(nextSibling, scroll)) {
           return delta.insert('\n');
         }
         const match = scroll.query(nextSibling);
@@ -510,7 +512,7 @@ function matchTable(node, delta) {
   return applyFormat(delta, 'table', row);
 }
 
-function matchText(node, delta) {
+function matchText(node, delta, scroll) {
   let text = node.data;
   // Word represents empty line with <o:p>&nbsp;</o:p>
   if (node.parentNode.tagName === 'O:P') {
@@ -519,7 +521,7 @@ function matchText(node, delta) {
   if (
     text.trim().length === 0 &&
     text.includes('\n') &&
-    !isBetweenInlineElements(node)
+    !isBetweenInlineElements(node, scroll)
   ) {
     return delta;
   }
@@ -531,14 +533,14 @@ function matchText(node, delta) {
     text = text.replace(/\r\n/g, ' ').replace(/\n/g, ' ');
     text = text.replace(/\s\s+/g, replacer.bind(replacer, true)); // collapse whitespace
     if (
-      (node.previousSibling == null && isLine(node.parentNode)) ||
-      (node.previousSibling != null && isLine(node.previousSibling))
+      (node.previousSibling == null && isLine(node.parentNode, scroll)) ||
+      (node.previousSibling != null && isLine(node.previousSibling, scroll))
     ) {
       text = text.replace(/^\s+/, replacer.bind(replacer, false));
     }
     if (
-      (node.nextSibling == null && isLine(node.parentNode)) ||
-      (node.nextSibling != null && isLine(node.nextSibling))
+      (node.nextSibling == null && isLine(node.parentNode, scroll)) ||
+      (node.nextSibling != null && isLine(node.nextSibling, scroll))
     ) {
       text = text.replace(/\s+$/, replacer.bind(replacer, false));
     }
