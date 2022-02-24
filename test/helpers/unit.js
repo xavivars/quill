@@ -1,4 +1,4 @@
-import isEqual from 'lodash.isequal';
+import isEqual from 'fast-deep-equal';
 import Editor from '../../core/editor';
 import Emitter from '../../core/emitter';
 import Selection from '../../core/selection';

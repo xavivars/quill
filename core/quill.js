@@ -1,5 +1,5 @@
 import Delta from '@reedsy/quill-delta';
-import cloneDeep from 'lodash.clonedeep';
+import rfdc from 'rfdc';
 import merge from 'lodash.merge';
 import * as Parchment from '@reedsy/parchment';
 import Editor from './editor';
@@ -10,6 +10,7 @@ import instances from './instances';
 import logger from './logger';
 import Theme from './theme';
 
+const cloneDeep = rfdc();
 const debug = logger('quill');
 
 const globalRegistry = new Parchment.Registry();
