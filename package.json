@@ -136,6 +136,9 @@
       "max-classes-per-file": [
         "off"
       ],
+      "react/jsx-indent": [
+        "off"
+      ],
       "prettier/prettier": "error"
     }
   },
