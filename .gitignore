@@ -8,3 +8,4 @@
 *.d.ts
 *.log
 package-lock.json
+!/dist
