@@ -1,5 +1,5 @@
-import cloneDeep from 'lodash.clonedeep';
-import isEqual from 'lodash.isequal';
+import rfdc from 'rfdc';
+import isEqual from 'fast-deep-equal';
 import merge from 'lodash.merge';
 import Delta, { AttributeMap, Op } from '@reedsy/quill-delta';
 import { LeafBlot, Scope } from '@reedsy/parchment';
@@ -9,6 +9,7 @@ import Block, { BlockEmbed, bubbleFormats } from '../blots/block';
 import Break from '../blots/break';
 import TextBlot, { escapeText } from '../blots/text';
 
+const cloneDeep = rfdc();
 const ASCII = /^[ -~]*$/;
 
 class Editor {

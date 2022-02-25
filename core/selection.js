@@ -1,10 +1,11 @@
 import { LeafBlot, Scope } from '@reedsy/parchment';
-import cloneDeep from 'lodash.clonedeep';
-import isEqual from 'lodash.isequal';
+import rfdc from 'rfdc';
+import isEqual from 'fast-deep-equal';
 import Emitter from './emitter';
 import logger from './logger';
 import Module from './module';
 
+const cloneDeep = rfdc();
 const debug = logger('quill:selection');
 
 class Range {
