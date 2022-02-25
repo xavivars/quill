@@ -1,4 +1,4 @@
-import rfdc from 'rfdc';
+import cloneDeep from 'lodash.clonedeep';
 import isEqual from 'fast-deep-equal';
 import Delta, { AttributeMap } from '@reedsy/quill-delta';
 import { EmbedBlot, Scope, TextBlot } from '@reedsy/parchment';
@@ -6,7 +6,6 @@ import Quill from '../core/quill';
 import logger from '../core/logger';
 import Module from '../core/module';
 
-const cloneDeep = rfdc();
 const debug = logger('quill:keyboard');
 
 const SHORTKEY = /Mac/i.test(navigator.platform) ? 'metaKey' : 'ctrlKey';
