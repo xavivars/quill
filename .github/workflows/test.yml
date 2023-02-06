@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - develop
+    - ci-test
   pull_request:
     branches:
     - develop
