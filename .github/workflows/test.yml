@@ -122,5 +122,5 @@ jobs:
       - name: Post-install
         run: npm rebuild && npm run prepare --if-present
       - name: Tag
-        if: ${{ github.ref == 'refs/heads/develop' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: ./tag.sh
