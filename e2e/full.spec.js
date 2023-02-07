@@ -8,11 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const test_1 = require("@playwright/test");
 const utils_1 = require("./utils");
 const fixtures_1 = require("./utils/fixtures");
-const QuillPage_1 = require("./utils/QuillPage");
+const QuillPage_1 = __importDefault(require("./utils/QuillPage"));
 (0, test_1.test)('compose an epic', ({ page }) => __awaiter(void 0, void 0, void 0, function* () {
     yield page.goto('http://localhost:9000/standalone/full');
     const quillPage = new QuillPage_1.default(page);

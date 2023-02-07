@@ -1,12 +1,15 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = exports.Range = void 0;
 const parchment_1 = require("parchment");
-const emitter_1 = require("./emitter");
-const logger_1 = require("./logger");
-const module_1 = require("./module");
-const fast_deep_equal_1 = require("fast-deep-equal");
-const rfdc_1 = require("rfdc");
+const emitter_1 = __importDefault(require("./emitter"));
+const logger_1 = __importDefault(require("./logger"));
+const module_1 = __importDefault(require("./module"));
+const fast_deep_equal_1 = __importDefault(require("fast-deep-equal"));
+const rfdc_1 = __importDefault(require("rfdc"));
 const cloneDeep = (0, rfdc_1.default)();
 const debug = (0, logger_1.default)('quill:selection');
 class Range {

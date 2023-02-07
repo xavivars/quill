@@ -1,8 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const quill_delta_1 = require("@reedsy/quill-delta");
-const quill_1 = require("../core/quill");
-const module_1 = require("../core/module");
+const quill_delta_1 = __importDefault(require("@reedsy/quill-delta"));
+const quill_1 = __importDefault(require("../core/quill"));
+const module_1 = __importDefault(require("../core/module"));
 const table_1 = require("../formats/table");
 class Table extends module_1.default {
     static register() {

@@ -1,8 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const eventemitter3_1 = require("eventemitter3");
-const instances_1 = require("./instances");
-const logger_1 = require("./logger");
+const eventemitter3_1 = __importDefault(require("eventemitter3"));
+const instances_1 = __importDefault(require("./instances"));
+const logger_1 = __importDefault(require("./logger"));
 const debug = (0, logger_1.default)('quill:events');
 const EVENTS = ['selectionchange', 'mousedown', 'mouseup', 'click'];
 EVENTS.forEach(eventName => {

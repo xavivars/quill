@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const parchment_1 = require("parchment");
-const text_1 = require("./text");
+const text_1 = __importDefault(require("./text"));
 class Cursor extends parchment_1.EmbedBlot {
     constructor(scroll, domNode, selection) {
         super(scroll, domNode);

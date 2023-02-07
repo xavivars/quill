@@ -1,13 +1,16 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = exports.BaseTooltip = void 0;
-const lodash_merge_1 = require("lodash.merge");
-const emitter_1 = require("../core/emitter");
-const theme_1 = require("../core/theme");
-const color_picker_1 = require("../ui/color-picker");
-const icon_picker_1 = require("../ui/icon-picker");
-const picker_1 = require("../ui/picker");
-const tooltip_1 = require("../ui/tooltip");
+const lodash_merge_1 = __importDefault(require("lodash.merge"));
+const emitter_1 = __importDefault(require("../core/emitter"));
+const theme_1 = __importDefault(require("../core/theme"));
+const color_picker_1 = __importDefault(require("../ui/color-picker"));
+const icon_picker_1 = __importDefault(require("../ui/icon-picker"));
+const picker_1 = __importDefault(require("../ui/picker"));
+const tooltip_1 = __importDefault(require("../ui/tooltip"));
 const ALIGNS = [false, 'center', 'right', 'justify'];
 const COLORS = [
     '#000000',

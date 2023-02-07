@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sanitize = exports.default = void 0;
-const inline_1 = require("../blots/inline");
+const inline_1 = __importDefault(require("../blots/inline"));
 class Link extends inline_1.default {
     static create(value) {
         const node = super.create(value);

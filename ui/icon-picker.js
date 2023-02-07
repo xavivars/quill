@@ -1,6 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const picker_1 = require("./picker");
+const picker_1 = __importDefault(require("./picker"));
 class IconPicker extends picker_1.default {
     constructor(select, icons) {
         super(select);

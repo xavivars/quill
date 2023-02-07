@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const block_1 = require("../blots/block");
-const link_1 = require("./link");
+const link_1 = __importDefault(require("./link"));
 const ATTRIBUTES = ['height', 'width'];
 class Video extends block_1.BlockEmbed {
     static create(value) {

@@ -1,6 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const dropdown_svg_1 = require("../assets/icons/dropdown.svg");
+const dropdown_svg_1 = __importDefault(require("../assets/icons/dropdown.svg"));
 let optionsCounter = 0;
 function toggleAriaAttribute(element, attribute) {
     element.setAttribute(attribute, !(element.getAttribute(attribute) === 'true'));

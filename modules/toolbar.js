@@ -1,11 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addControls = exports.default = void 0;
-const quill_delta_1 = require("@reedsy/quill-delta");
+const quill_delta_1 = __importDefault(require("@reedsy/quill-delta"));
 const parchment_1 = require("parchment");
-const quill_1 = require("../core/quill");
-const logger_1 = require("../core/logger");
-const module_1 = require("../core/module");
+const quill_1 = __importDefault(require("../core/quill"));
+const logger_1 = __importDefault(require("../core/logger"));
+const module_1 = __importDefault(require("../core/module"));
 const debug = (0, logger_1.default)('quill:toolbar');
 class Toolbar extends module_1.default {
     constructor(quill, options) {

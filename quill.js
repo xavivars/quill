@@ -1,36 +1,62 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("./core");
+const core_1 = __importDefault(require("./core"));
 const align_1 = require("./formats/align");
 const direction_1 = require("./formats/direction");
-const indent_1 = require("./formats/indent");
-const blockquote_1 = require("./formats/blockquote");
-const header_1 = require("./formats/header");
-const list_1 = require("./formats/list");
+const indent_1 = __importDefault(require("./formats/indent"));
+const blockquote_1 = __importDefault(require("./formats/blockquote"));
+const header_1 = __importDefault(require("./formats/header"));
+const list_1 = __importDefault(require("./formats/list"));
 const background_1 = require("./formats/background");
 const color_1 = require("./formats/color");
 const font_1 = require("./formats/font");
 const size_1 = require("./formats/size");
-const bold_1 = require("./formats/bold");
-const italic_1 = require("./formats/italic");
-const link_1 = require("./formats/link");
-const script_1 = require("./formats/script");
-const strike_1 = require("./formats/strike");
-const underline_1 = require("./formats/underline");
-const formula_1 = require("./formats/formula");
-const image_1 = require("./formats/image");
-const video_1 = require("./formats/video");
-const code_1 = require("./formats/code");
-const syntax_1 = require("./modules/syntax");
-const table_1 = require("./modules/table");
-const toolbar_1 = require("./modules/toolbar");
-const icons_1 = require("./ui/icons");
-const picker_1 = require("./ui/picker");
-const color_picker_1 = require("./ui/color-picker");
-const icon_picker_1 = require("./ui/icon-picker");
-const tooltip_1 = require("./ui/tooltip");
-const bubble_1 = require("./themes/bubble");
-const snow_1 = require("./themes/snow");
+const bold_1 = __importDefault(require("./formats/bold"));
+const italic_1 = __importDefault(require("./formats/italic"));
+const link_1 = __importDefault(require("./formats/link"));
+const script_1 = __importDefault(require("./formats/script"));
+const strike_1 = __importDefault(require("./formats/strike"));
+const underline_1 = __importDefault(require("./formats/underline"));
+const formula_1 = __importDefault(require("./formats/formula"));
+const image_1 = __importDefault(require("./formats/image"));
+const video_1 = __importDefault(require("./formats/video"));
+const code_1 = __importStar(require("./formats/code"));
+const syntax_1 = __importDefault(require("./modules/syntax"));
+const table_1 = __importDefault(require("./modules/table"));
+const toolbar_1 = __importDefault(require("./modules/toolbar"));
+const icons_1 = __importDefault(require("./ui/icons"));
+const picker_1 = __importDefault(require("./ui/picker"));
+const color_picker_1 = __importDefault(require("./ui/color-picker"));
+const icon_picker_1 = __importDefault(require("./ui/icon-picker"));
+const tooltip_1 = __importDefault(require("./ui/tooltip"));
+const bubble_1 = __importDefault(require("./themes/bubble"));
+const snow_1 = __importDefault(require("./themes/snow"));
 core_1.default.register({
     'attributors/attribute/direction': direction_1.DirectionAttribute,
     'attributors/class/align': align_1.AlignClass,

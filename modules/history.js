@@ -1,9 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getLastChangeIndex = exports.default = void 0;
 const parchment_1 = require("parchment");
-const module_1 = require("../core/module");
-const quill_1 = require("../core/quill");
+const module_1 = __importDefault(require("../core/module"));
+const quill_1 = __importDefault(require("../core/quill"));
 class History extends module_1.default {
     constructor(quill, options) {
         super(quill, options);

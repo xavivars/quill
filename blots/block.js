@@ -1,11 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = exports.BlockEmbed = exports.bubbleFormats = exports.blockDelta = void 0;
 const parchment_1 = require("parchment");
-const quill_delta_1 = require("@reedsy/quill-delta");
-const break_1 = require("./break");
-const inline_1 = require("./inline");
-const text_1 = require("./text");
+const quill_delta_1 = __importDefault(require("@reedsy/quill-delta"));
+const break_1 = __importDefault(require("./break"));
+const inline_1 = __importDefault(require("./inline"));
+const text_1 = __importDefault(require("./text"));
 const NEWLINE_LENGTH = 1;
 class Block extends parchment_1.BlockBlot {
     constructor() {

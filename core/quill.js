@@ -1,17 +1,43 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = exports.overload = exports.expandConfig = exports.globalRegistry = void 0;
-const rfdc_1 = require("rfdc");
-const lodash_merge_1 = require("lodash.merge");
-const Parchment = require("parchment");
-const quill_delta_1 = require("@reedsy/quill-delta");
-const editor_1 = require("./editor");
-const emitter_1 = require("./emitter");
-const instances_1 = require("./instances");
-const logger_1 = require("./logger");
-const module_1 = require("./module");
+const rfdc_1 = __importDefault(require("rfdc"));
+const lodash_merge_1 = __importDefault(require("lodash.merge"));
+const Parchment = __importStar(require("parchment"));
+const quill_delta_1 = __importDefault(require("@reedsy/quill-delta"));
+const editor_1 = __importDefault(require("./editor"));
+const emitter_1 = __importDefault(require("./emitter"));
+const instances_1 = __importDefault(require("./instances"));
+const logger_1 = __importDefault(require("./logger"));
+const module_1 = __importDefault(require("./module"));
 const selection_1 = require("./selection");
-const theme_1 = require("./theme");
+const theme_1 = __importDefault(require("./theme"));
 const cloneDeep = (0, rfdc_1.default)();
 const debug = (0, logger_1.default)('quill');
 const globalRegistry = new Parchment.Registry();

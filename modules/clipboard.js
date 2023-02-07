@@ -1,15 +1,18 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.traverse = exports.matchText = exports.matchNewline = exports.matchBlot = exports.matchAttributor = exports.default = void 0;
 const parchment_1 = require("parchment");
-const quill_delta_1 = require("@reedsy/quill-delta");
+const quill_delta_1 = __importDefault(require("@reedsy/quill-delta"));
 const block_1 = require("../blots/block");
-const logger_1 = require("../core/logger");
-const module_1 = require("../core/module");
-const quill_1 = require("../core/quill");
+const logger_1 = __importDefault(require("../core/logger"));
+const module_1 = __importDefault(require("../core/module"));
+const quill_1 = __importDefault(require("../core/quill"));
 const align_1 = require("../formats/align");
 const background_1 = require("../formats/background");
-const code_1 = require("../formats/code");
+const code_1 = __importDefault(require("../formats/code"));
 const color_1 = require("../formats/color");
 const direction_1 = require("../formats/direction");
 const font_1 = require("../formats/font");

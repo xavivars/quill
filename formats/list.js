@@ -1,9 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = exports.ListContainer = void 0;
-const block_1 = require("../blots/block");
-const container_1 = require("../blots/container");
-const quill_1 = require("../core/quill");
+const block_1 = __importDefault(require("../blots/block"));
+const container_1 = __importDefault(require("../blots/container"));
+const quill_1 = __importDefault(require("../core/quill"));
 class ListContainer extends container_1.default {
 }
 exports.ListContainer = ListContainer;

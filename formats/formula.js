@@ -1,6 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const embed_1 = require("../blots/embed");
+const embed_1 = __importDefault(require("../blots/embed"));
 class Formula extends embed_1.default {
     static create(value) {
         // @ts-expect-error

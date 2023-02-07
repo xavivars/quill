@@ -1,8 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const parchment_1 = require("parchment");
-const break_1 = require("./break");
-const text_1 = require("./text");
+const break_1 = __importDefault(require("./break"));
+const text_1 = __importDefault(require("./text"));
 class Inline extends parchment_1.InlineBlot {
     static compare(self, other) {
         const selfIndex = Inline.order.indexOf(self);
