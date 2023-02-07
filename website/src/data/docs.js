@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const items = [
     {
         title: 'Quickstart',
@@ -84,5 +86,5 @@ const items = [
         url: '/docs/themes/',
     },
 ];
-export default items;
+exports.default = items;
 //# sourceMappingURL=docs.js.map

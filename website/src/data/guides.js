@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const items = [
     {
         title: 'Why Quill',
@@ -36,5 +38,5 @@ const items = [
         url: '/guides/upgrading-to-1-0/',
     },
 ];
-export default items;
+exports.default = items;
 //# sourceMappingURL=guides.js.map

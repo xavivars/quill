@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class QuillPage {
     constructor(page) {
         this.page = page;
@@ -9,5 +11,5 @@ class QuillPage {
         return this.root.innerHTML();
     }
 }
-export default QuillPage;
+exports.default = QuillPage;
 //# sourceMappingURL=QuillPage.js.map

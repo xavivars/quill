@@ -1,4 +1,6 @@
-import { devices } from '@playwright/test';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const test_1 = require("@playwright/test");
 const config = {
     testDir: './e2e',
     testMatch: '*.spec.ts',
@@ -16,11 +18,11 @@ const config = {
         trace: 'on-first-retry',
     },
     projects: [
-        { name: 'Chrome', use: Object.assign({}, devices['Desktop Chrome']) },
-        { name: 'Firefox', use: Object.assign({}, devices['Desktop Firefox']) },
-        { name: 'Safari', use: Object.assign({}, devices['Desktop Safari']) },
+        { name: 'Chrome', use: Object.assign({}, test_1.devices['Desktop Chrome']) },
+        { name: 'Firefox', use: Object.assign({}, test_1.devices['Desktop Firefox']) },
+        { name: 'Safari', use: Object.assign({}, test_1.devices['Desktop Safari']) },
         { name: 'Edge', use: { channel: 'msedge' } },
     ],
 };
-export default config;
+exports.default = config;
 //# sourceMappingURL=playwright.config.js.map

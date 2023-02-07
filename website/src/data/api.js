@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const items = [
     {
         title: 'Content',
@@ -51,5 +53,5 @@ const items = [
         hashes: ['debug', 'import', 'register', 'addContainer', 'getModule'],
     },
 ];
-export default items;
+exports.default = items;
 //# sourceMappingURL=api.js.map
