@@ -6,7 +6,7 @@
   "homepage": "http://quilljs.com",
   "main": "dist/quill.js",
   "module": "dist/quill.es.js",
-  "types": "dist/quill.d.ts",
+  "types": "quill.d.ts",
   "jsnext:main": "dist/quill.es.js",
   "config": {
     "ports": {
@@ -91,7 +91,7 @@
     "arrowParens": "avoid"
   },
   "scripts": {
-    "build": "npm run lint && rollup -c && tsc -d --emitDeclarationOnly --noEmit false --declarationDir dist",
+    "build": "npm run lint && rollup -c && tsc -d --emitDeclarationOnly --noEmit false",
     "build:release": "./_develop/scripts/release.sh",
     "develop": "npm run start",
     "lint": "npm run lint:eslint && npm run lint:tsc",
